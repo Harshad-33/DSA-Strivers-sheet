@@ -4,10 +4,17 @@ import java.util.ArrayList;
 public class IsSorted {
     public static boolean isSorted(ArrayList<Integer> nums){
         int n = nums.size();
+        int count = 0;
         for(int i=1;i<n;i++){
             if(nums.get(i-1) > nums.get(i)){
-                return false;
+                count++;
             }
+        }
+        if(nums.get(n-1) > nums.get(0)){
+            count++;
+        }
+        if(count > 1){
+            return false;
         }
         return true;
     }
