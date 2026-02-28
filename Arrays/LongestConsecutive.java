@@ -35,3 +35,4 @@ public class LongestConsecutive {
         System.out.println(longestConsecutive(nums));
     }
 }
+
